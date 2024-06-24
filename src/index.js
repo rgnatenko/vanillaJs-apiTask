@@ -92,11 +92,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function addHistoryItemToDOM(item) {
         const historyDiv = document.createElement('div');
-        historyDiv.classList.add('history-item');
+        historyDiv.classList.add('searchHistory-item');
         historyDiv.innerHTML = `
     <p>${item.title}</p>
     <p>${item.date}</p>
-    <button class="clear-item-btn">
+    <button id="searchHistory-clear-item-btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="feather feather-x">
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </svg>
     </button/>
     `;
-        const clearItemBtn = historyDiv.querySelector('.clear-item-btn');
+        const clearItemBtn = historyDiv.querySelector('#searchHistory-clear-item-btn');
         clearItemBtn.addEventListener('click', function () {
             removeFromSearchHistory(item.title);
             historyDiv.remove();
