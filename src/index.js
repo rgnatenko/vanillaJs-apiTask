@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const historyListDiv = document.querySelector('.searchHistory-list');
 
     let clearButton = null;
-    const clearSearchHistoryButton = document.querySelector('.clear-history');
+    const clearSearchHistoryButton = document.querySelector('.searchHistory-clear-btn');
     let debounceTimeout;
 
     loadSearchHistory();

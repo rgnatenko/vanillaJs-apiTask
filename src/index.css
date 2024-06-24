@@ -2,7 +2,25 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+
     font-size: 16px;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Arial";
+}
+
+body {
+    height: 100%;
+
+    background: #f2f2f2;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 button {
@@ -12,60 +30,94 @@ button {
     cursor: pointer;
 }
 
-html, body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: "Arial";
-}
-
-body {
-    background: #f2f2f2;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-}
-
 #main {
     height: 100%;
-    padding: 30px;
+
     display: flex;
     flex-direction: column;
     gap: 24px;
-}
 
-.input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #909090;
-}
-
-.input::placeholder {
-    color: #707070;
-}
-
-.input:focus-visible {
-    border: 1px solid #303030;
-    outline: none;
-}
-
-.input-field {
-    position: relative;
-    width: 100%;
+    padding: 30px;
 }
 
 #searchHistory {
     width: 100%;
+
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
+.searchHistory-item {
+    width: max-content;
+    min-width: 600px;
+    max-width: 800px;
+    min-height: 70px;
+    max-height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px;
+
+    border-block: 1px solid #c5c5c5;
+}
+
 @media (min-width: 1024px) {
-    #searchHistory {
-        width: 60%;
+    .searchHistory-item {
+        width: 100%;
     }
+}
+
+.searchHistory-item p:first-child {
+    width: 50%;
+
+    display: block;
+
+    font-weight: 700;
+}
+
+.searchHistory-item p:nth-child(2) {
+    width: max-content;
+
+    display: block;
+
+    font-size: 12px;
+    color: #909090;
+}
+
+.searchHistory-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.searchHistory-list {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    overflow-x: auto;
+}
+
+@media(min-width: 1024px) {
+    .searchHistory-list {
+        overflow-x: visible;
+    }
+}
+
+.searchHistory-clear-btn {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.searchHistory-clear-btn:disabled {
+    color: #808080;
+    cursor: auto;
 }
 
 #searchResults {
@@ -85,10 +137,42 @@ body {
     background: #ffcfcf;
 }
 
+.input {
+    width: 100%;
+
+    display: block;
+    padding: 10px;
+
+    border: 1px solid #909090;
+}
+
+.input::placeholder {
+    color: #707070;
+}
+
+.input:focus-visible {
+    border: 1px solid #303030;
+    outline: none;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+}
+
+
+@media (min-width: 1024px) {
+    #searchHistory {
+        width: 60%;
+    }
+}
+
 .job {
     display: flex;
-    padding: 10px;
     align-items: center;
+
+    padding: 10px;
+
     color: #707070;
     text-align: left;
 
@@ -127,70 +211,7 @@ body {
 
 button {
     background: transparent;
+
     outline: none;
     border: 0px;
-}
-
-.searchHistory-item {
-    width: max-content;
-    min-width: 600px;
-    max-width: 800px;
-    min-height: 70px;
-    max-height: 100px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    gap: 12px;
-    border-block: 1px solid #c5c5c5;
-}
-
-@media (min-width: 1024px) {
-    .searchHistory-item {
-        width: 100%;
-    }
-}
-
-.searchHistory-item p:first-child {
-    display: block;
-    width: 50%;
-    font-weight: 700;
-}
-
-.searchHistory-item p:nth-child(2) {
-    display: block;
-    width: max-content;
-    font-size: 12px;
-    color: #909090;
-}
-
-.searchHistory-header {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.searchHistory-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    overflow-x: auto;
-}
-
-@media(min-width: 1024px) {
-    .searchHistory-list {
-        overflow-x: visible;
-    }
-}
-
-.clear-history {
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.clear-history:disabled {
-    color: #808080;
-    cursor: auto;
 }
