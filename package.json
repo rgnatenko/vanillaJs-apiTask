@@ -1,0 +1,13 @@
+{
+  "name": "api-task",
+  "version": "1.0.0",
+  "description": "**Note: Please read this document thoroughly before starting to code** and plan your work accordingly.<br/><br/> Clone the repository and follow the instructions that are found in **readme.md**.<br/> When ready, work locally on your computer and make commits as you progress with your work.<br/>Finally, zip the entire project/directory (ensure to include your git history) and send it via the chat.<br/><br/>",
+  "main": "src/js/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "open http://localhost:8080 && node src/server.js"
+  },
+  "keywords": [],
+  "author": "Ruslana",
+  "license": "ISC"
+}
